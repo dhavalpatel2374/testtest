@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>Flappy Bird</title>
+    <script src="js/phaser.min.js"></script>
+    <script src="js/box2d-plugin-full.js"></script>
+
+    
+
+   <style type="text/css">
+     body {
+            padding: 0px;
+            margin: 0px;
+            background: black;
+            margin-right: auto;
+            margin-left: auto;
+        }
+   #score {
+      font-family: Arial;
+      font-size: 32px;
+      font-weight: bold;
+      color: #fff;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+    
+    .menu {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #eee;
+      padding: 20px;
+      border-radius: 5px;
+      text-align: center;
+    }
+    
+    #menu input {
+      display: block;
+      margin-bottom: 10px;
+      padding: 5px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    
+    #menu button {
+      padding: 5px;
+      border-radius: 5px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    #lose {
+      display: none;
+    }
+  </style>
+
+<body>
+  
+  <div id="game"></div>
+  
+  <div id="menu" class="menu">
+    <h2>Enter Your Details</h2>
+    <input type="text" id="name" placeholder="Your Name">
+    <input type="tel" id="phone" placeholder="Your Phone Number">
+    <button id="start-button">Start Game</button>
+  </div>
+
+  <div id="lose" class="menu">
+    <h2 id="score-text"></h2>
+  </div>
+</head>
+    
+<body>
+    
+    <!-- include the main game file -->
+    <script src="js/crypto-js.min.js"></script>
+    <script src="js/classes/util/Orientation.js"></script>
+    <script src="js/classes/util/Storage.js"></script>
+    <script src="js/classes/util/AudioController.js"></script>
+    <script src="js/util.js"></script>
+    <script src="js/states/BootState.js"></script>
+    <script src="js/states/PreloadState.js"></script>
+    <script src="js/states/GameState.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 
